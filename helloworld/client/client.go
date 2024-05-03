@@ -13,6 +13,8 @@ func main() {
 	}
 	var reply *string = new(string)
 	err = client.Call("HelloService.Hello", "bobby", reply)
+	// 不要自己去封装hello方法
+	// client.Hello()
 	if err != nil {
 		panic("调用失败")
 	}
